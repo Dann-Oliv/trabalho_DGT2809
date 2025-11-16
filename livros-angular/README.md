@@ -1,27 +1,88 @@
-# LivrosAngular
+# Catálogo de Livros - Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
+## 📚 Sobre o Projeto
 
-## Development server
+Sistema web desenvolvido em Angular para gerenciamento de um catálogo de livros. Permite visualizar, adicionar e excluir livros de uma biblioteca pessoal.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+**Disciplina:** DGT2809 - Aprofundamento em Desenvolvimento Front-End
 
-## Code scaffolding
+## 🎯 Objetivo
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Desenvolver uma aplicação Angular completa demonstrando:
+- Implementação de serviços injetáveis
+- Criação de componentes com TypeScript e HTML
+- Gerenciamento de formulários reativos
+- Sistema de navegação entre páginas (routing)
 
-## Build
+## 🚀 Funcionalidades
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Listagem de Livros:** Visualização de livros em tabela com título, resumo, editora e autores
+- **Cadastro de Livros:** Formulário para adicionar novos livros ao catálogo
+- **Exclusão de Livros:** Remoção de livros através de botão na listagem
+- **Navegação:** Menu de navegação entre páginas de listagem e cadastro
 
-## Running unit tests
+## 🛠️ Tecnologias Utilizadas
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Angular 17
+- TypeScript
+- Bootstrap 5
+- Angular Router
+- Angular Forms
 
-## Running end-to-end tests
+## 📋 Pré-requisitos
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Node.js v20.19+ ou v22.12+
+- npm (gerenciador de pacotes)
+- Angular CLI
 
-## Further help
+## ⚙️ Instalação e Execução
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+# 1. Instalar Node.js (versão 20 LTS ou superior)
+# Baixe em: https://nodejs.org/
+
+# 2. Instalar Angular CLI globalmente
+npm install -g @angular/cli
+
+# 3. Navegar até a pasta do projeto
+cd livros-angular
+
+# 4. Instalar dependências
+npm install
+
+# 5. Executar servidor de desenvolvimento
+ng serve
+
+# 6. Acessar no navegador
+# http://localhost:4200/
+```
+
+## 📁 Estrutura do Projeto
+
+```
+src/app/
+├── editora.ts                      # Modelo de dados Editora
+├── livro.ts                        # Modelo de dados Livro
+├── controle-editora.service.ts     # Serviço para gerenciar editoras
+├── controle-livros.service.ts      # Serviço para gerenciar livros
+├── livro-lista/                    # Componente de listagem
+│   ├── livro-lista.component.ts
+│   ├── livro-lista.component.html
+│   └── livro-lista.component.css
+├── livro-dados/                    # Componente de cadastro
+│   ├── livro-dados.component.ts
+│   ├── livro-dados.component.html
+│   └── livro-dados.component.css
+├── app-routing.module.ts           # Configuração de rotas
+├── app.module.ts                   # Módulo principal
+└── app.component.html              # Template principal com menu
+```
+
+## 🔗 Rotas
+
+- `/lista` - Página de listagem de livros (rota padrão)
+- `/dados` - Página de cadastro de novos livros
+
+## 👨‍💻 Desenvolvimento
+
+Projeto desenvolvido como trabalho prático da disciplina DGT2809, seguindo as especificações fornecidas para implementação de um sistema CRUD básico em Angular.
